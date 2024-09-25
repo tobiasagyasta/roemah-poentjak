@@ -1,9 +1,20 @@
+"use client";
 import Image from "next/image";
 import { montserrat, merriweather, playfairDisplay } from "./fonts/fonts";
 import HeroBanner from "@/components/HeroBanner";
 import ContactForm from "@/components/ContactForm";
+import { useState, useEffect } from "react";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000); // Timeout for 3 seconds, adjust as needed based on expected load time
+
+    return () => clearTimeout(timeout); // Clear timeout if component unmounts
+  }, []);
   return (
     <>
       <main>
@@ -139,7 +150,12 @@ export default function Home() {
             </h3>
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center relative">
+            {isLoading && (
+              <div className="absolute inset-0 flex items-center justify-center bg-white/80 z-10">
+                <LoadingSpinner />
+              </div>
+            )}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.4863258120795!2d107.0372263957841!3d-6.710346870176551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69b3d93fb134e7%3A0x8073be7fde1db455!2sRoemah%20Poentjak!5e0!3m2!1sen!2sid!4v1727258980483!5m2!1sen!2sid"
               width="600"
