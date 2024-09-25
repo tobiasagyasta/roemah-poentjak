@@ -74,8 +74,8 @@ export default function ContactForm() {
       <h3
         className={`${montserrat.className} text-xl md:text-2xl text-center font-normal mb-8`}
       >
-        Have a question, inquire about pricing, or want to share feedback? We're
-        here to help.
+        Have a question, inquire about pricing, or want to share feedback? We
+        are here to help.
       </h3>
       <Form {...form}>
         <form
