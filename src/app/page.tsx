@@ -1,101 +1,143 @@
 import Image from "next/image";
+import { montserrat, merriweather, playfairDisplay } from "./fonts/fonts";
+import HeroBanner from "@/components/HeroBanner";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <main>
+        <HeroBanner></HeroBanner>
+        <section className="history">
+          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
+            <div className="text-content md:w-1/2 p-10 text-center">
+              <h1
+                className={`${playfairDisplay.className} text-4xl md:text-5xl font-bold mb-4 leading-tight`}
+              >
+                Our History
+              </h1>
+              <h3
+                className={`${montserrat.className} text-xl md:text-2xl font-normal mb-6`}
+              >
+                Origins of Roemah Poentjak
+              </h3>
+              <p className="text-base leading-relaxed mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                quaerat numquam sit, ratione corrupti suscipit perspiciatis
+                debitis quo. Ratione exercitationem reprehenderit ab, minus
+                deserunt explicabo esse maiores nobis dolores tempore!
+              </p>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+            {/* Center the image in this container */}
+            <div className="flex justify-center items-center md:w-1/2 px-10 py-20 bg-[#AFA384]">
+              <div className="relative w-full max-w-[500px]">
+                <Image
+                  src="/treehouse.jpg"
+                  alt="Image content treehouse"
+                  width={600} // Placeholder width
+                  height={800} // Placeholder height
+                  layout="responsive"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="wide-text-1 py-16 bg-[#F8F5F2]">
+          <div className="container mx-auto flex flex-col items-center text-center">
+            <div className="text-content p-10">
+              <h1
+                className={`${playfairDisplay.className} text-4xl md:text-5xl font-bold mb-4 leading-tight`}
+              >
+                More Text
+              </h1>
+              <h3
+                className={`${montserrat.className} text-xl md:text-2xl font-normal mb-6`}
+              >
+                Insert Text Here
+              </h3>
+              <div className="max-w-3xl mx-auto">
+                <p className="text-base text-center leading-relaxed mb-8">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                  quaerat numquam sit, ratione corrupti suscipit perspiciatis
+                  debitis quo. Ratione exercitationem reprehenderit ab, minus
+                  deserunt explicabo esse maiores nobis dolores tempore!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="wide-image-1 w-full h-80 md:h-[600px] lg:h-[800px] relative overflow-hidden">
+          <Image
+            className="object-cover w-full h-full"
+            src="/wide-1.jpg"
+            alt="Wide interior image 1"
+            layout="fill"
+            objectFit="cover"
+          />
+        </section>
+        <section className="about-us">
+          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
+            {/* Image on the left */}
+            <div className="flex justify-center items-center md:w-1/2 px-10 py-20 bg-[#253C53]">
+              <div className="relative w-full max-w-[500px]">
+                <Image
+                  src="/bed.jpg"
+                  alt="Image content bed"
+                  width={600} // Placeholder width
+                  height={800} // Placeholder height
+                  layout="responsive"
+                />
+              </div>
+            </div>
+
+            {/* Text content on the right */}
+            <div className="text-content md:w-1/2 p-10 text-center md:text-left">
+              <h1
+                className={`${playfairDisplay.className} text-4xl text-center md:text-5xl font-bold mb-4 leading-tight`}
+              >
+                About Us
+              </h1>
+              <h3
+                className={`${montserrat.className} text-xl md:text-2xl text-center font-normal mb-6`}
+              >
+                What We Provide
+              </h3>
+              <p className="text-base text-center leading-relaxed mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                quaerat numquam sit, ratione corrupti suscipit perspiciatis
+                debitis quo. Ratione exercitationem reprehenderit ab, minus
+                deserunt explicabo esse maiores nobis dolores tempore!
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="location relative bg-[#F8F5F2] py-16">
+          <div className="container mx-auto text-center mb-8">
+            <h1
+              className={`${playfairDisplay.className} text-4xl text-center md:text-5xl font-bold mb-4 leading-tight`}
+            >
+              Our Location
+            </h1>
+            <h3
+              className={`${montserrat.className} text-xl md:text-2xl text-center font-normal mb-6`}
+            >
+              Come and Visit Us!
+            </h3>
+          </div>
+
+          <div className="flex justify-center">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.4863258120795!2d107.0372263957841!3d-6.710346870176551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69b3d93fb134e7%3A0x8073be7fde1db455!2sRoemah%20Poentjak!5e0!3m2!1sen!2sid!4v1727258980483!5m2!1sen!2sid"
+              width="600"
+              height="450"
+              style={{ border: 0 }}
+              loading="lazy"
+              className="w-full md:w-2/3 lg:w-1/2 rounded-lg shadow-lg"
+            ></iframe>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
