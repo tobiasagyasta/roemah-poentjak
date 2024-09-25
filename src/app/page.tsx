@@ -23,7 +23,7 @@ export default function Home() {
         {/* History Section */}
         <section className="history min-h-[80vh] md:min-h-screen" id="about-us">
           <div className="container mx-auto flex flex-col md:flex-row items-center justify-center bg-[#F1F7ED]">
-            <div className="text-content md:w-1/2 p-10 text-center">
+            <div className="flex flex-col items-center justify-center text-content min-h-[80vh] md:min-h-screen md:w-1/2 p-10 text-center">
               <h1
                 className={`${playfairDisplay.className} text-4xl md:text-5xl font-bold mb-4 leading-tight`}
               >
