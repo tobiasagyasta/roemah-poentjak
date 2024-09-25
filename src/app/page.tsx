@@ -8,7 +8,9 @@ export default function Home() {
     <>
       <main>
         <HeroBanner></HeroBanner>
-        <section className="history" id="about-us">
+
+        {/* History Section */}
+        <section className="history min-h-[80vh] md:min-h-screen" id="about-us">
           <div className="container mx-auto flex flex-col md:flex-row items-center justify-center bg-[#F1F7ED]">
             <div className="text-content md:w-1/2 p-10 text-center">
               <h1
@@ -29,21 +31,23 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Center the image in this container */}
+            {/* Image */}
             <div className="flex justify-center items-center md:w-1/2 px-10 py-20 bg-[#1E3231]">
               <div className="relative w-full max-w-[500px]">
                 <Image
                   src="/treehouse.jpg"
                   alt="Image content treehouse"
-                  width={600} // Placeholder width
-                  height={800} // Placeholder height
+                  width={600}
+                  height={800}
                   layout="responsive"
                 />
               </div>
             </div>
           </div>
         </section>
-        <section className="wide-text-1 py-16 bg-[#9D9982]">
+
+        {/* Wide Text Section */}
+        <section className="wide-text-1 min-h-[80vh] md:min-h-screen py-16 bg-[#9D9982]">
           <div className="container mx-auto flex flex-col items-center text-center">
             <div className="text-content p-10">
               <h1
@@ -68,7 +72,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="wide-image-1 w-full h-80 md:h-[600px] lg:h-[800px] bg-[#35261D] relative overflow-hidden">
+        {/* Wide Image Section */}
+        <section className="hidden wide-image-1 w-full h-80 md:h-[600px] lg:h-[800px] bg-[#35261D] relative overflow-hidden md:flex">
           <Image
             className="object-cover w-full h-full p-8 md:p-36"
             src="/wide-1.jpg"
@@ -77,23 +82,25 @@ export default function Home() {
             objectFit="cover"
           />
         </section>
-        <section className="about-us">
+
+        {/* About Us Section */}
+        <section className="about-us min-h-[80vh] md:min-h-screen">
           <div className="container mx-auto flex flex-col md:flex-row items-center justify-center bg-[#F8F4E3]">
-            {/* Image on the left */}
+            {/* Image */}
             <div className="flex justify-center items-center md:w-1/2 px-10 py-20 bg-[#692229]">
               <div className="relative w-full max-w-[500px]">
                 <Image
                   src="/bed.jpg"
                   alt="Image content bed"
-                  width={600} // Placeholder width
-                  height={800} // Placeholder height
+                  width={600}
+                  height={800}
                   layout="responsive"
                 />
               </div>
             </div>
 
-            {/* Text content on the right */}
-            <div className="text-content md:w-1/2 p-10 text-center md:text-left">
+            {/* Text */}
+            <div className="flex flex-col items-center justify-center text-content min-h-[80vh] md:min-h-screen md:w-1/2 p-10 text-center md:text-left">
               <h1
                 className={`${playfairDisplay.className} text-4xl text-center md:text-5xl font-bold mb-4 leading-tight`}
               >
@@ -113,7 +120,12 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="location relative bg-[#F8F5F2] py-16" id="location">
+
+        {/* Location Section */}
+        <section
+          className="location relative bg-[#F8F5F2] py-16 min-h-[80vh] md:min-h-screen"
+          id="location"
+        >
           <div className="container mx-auto text-center mb-8">
             <h1
               className={`${playfairDisplay.className} text-4xl text-center md:text-5xl font-bold mb-4 leading-tight`}
@@ -123,7 +135,7 @@ export default function Home() {
             <h3
               className={`${montserrat.className} text-xl md:text-2xl text-center font-normal mb-6`}
             >
-              Come and Visit Us!{" "}
+              Come and Visit Us!
             </h3>
           </div>
 
@@ -138,7 +150,12 @@ export default function Home() {
             ></iframe>
           </div>
         </section>
-        <section className="Contact Us bg-[#F8F5F2]" id="contact">
+
+        {/* Contact Us Section */}
+        <section
+          className="Contact Us bg-[#F8F5F2] min-h-[80vh] md:min-h-screen"
+          id="contact"
+        >
           <ContactForm />
         </section>
       </main>
