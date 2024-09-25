@@ -122,7 +122,7 @@ export default function Home() {
             <h3
               className={`${montserrat.className} text-xl md:text-2xl text-center font-normal mb-6`}
             >
-              Come and Visit Us!
+              Come and Visit Us!{" "}
             </h3>
           </div>
 
