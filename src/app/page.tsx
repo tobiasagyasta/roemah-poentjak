@@ -134,7 +134,7 @@ export default function Home() {
               height="450"
               style={{ border: 0 }}
               loading="lazy"
-              className="w-full md:w-2/3 lg:w-1/2 rounded-lg shadow-lg"
+              className="p-4 w-full md:w-2/3 lg:w-1/2 md:p-0 rounded-lg shadow-lg"
             ></iframe>
           </div>
         </section>
