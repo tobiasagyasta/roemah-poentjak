@@ -9,7 +9,7 @@ export default function Home() {
       <main>
         <HeroBanner></HeroBanner>
         <section className="history" id="about-us">
-          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
+          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center bg-[#F1F7ED]">
             <div className="text-content md:w-1/2 p-10 text-center">
               <h1
                 className={`${playfairDisplay.className} text-4xl md:text-5xl font-bold mb-4 leading-tight`}
@@ -30,7 +30,7 @@ export default function Home() {
             </div>
 
             {/* Center the image in this container */}
-            <div className="flex justify-center items-center md:w-1/2 px-10 py-20 bg-[#AFA384]">
+            <div className="flex justify-center items-center md:w-1/2 px-10 py-20 bg-[#1E3231]">
               <div className="relative w-full max-w-[500px]">
                 <Image
                   src="/treehouse.jpg"
@@ -43,7 +43,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="wide-text-1 py-16 bg-[#F8F5F2]">
+        <section className="wide-text-1 py-16 bg-[#9D9982]">
           <div className="container mx-auto flex flex-col items-center text-center">
             <div className="text-content p-10">
               <h1
@@ -68,9 +68,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="wide-image-1 w-full h-80 md:h-[600px] lg:h-[800px] relative overflow-hidden">
+        <section className="wide-image-1 w-full h-80 md:h-[600px] lg:h-[800px] bg-[#35261D] relative overflow-hidden">
           <Image
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full p-8 md:p-36"
             src="/wide-1.jpg"
             alt="Wide interior image 1"
             layout="fill"
@@ -78,9 +78,9 @@ export default function Home() {
           />
         </section>
         <section className="about-us">
-          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center bg-[#A19992]">
+          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center bg-[#F8F4E3]">
             {/* Image on the left */}
-            <div className="flex justify-center items-center md:w-1/2 px-10 py-20 bg-[#E7E2DB]">
+            <div className="flex justify-center items-center md:w-1/2 px-10 py-20 bg-[#692229]">
               <div className="relative w-full max-w-[500px]">
                 <Image
                   src="/bed.jpg"
@@ -138,7 +138,7 @@ export default function Home() {
             ></iframe>
           </div>
         </section>
-        <section className="Contact Us" id="contact">
+        <section className="Contact Us bg-[#F8F5F2]" id="contact">
           <ContactForm />
         </section>
       </main>
