@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <Headroom>
       <header
-        className="flex flex-row justify-between items-center bg-white shadow p-4 h-12 md:h-20 lg:h-24 text-slate-900"
+        className="flex flex-row justify-between items-center bg-white shadow p-4 h-20 md:h-20 lg:h-24 text-slate-900"
         style={{
           position: "sticky",
           top: 0,
@@ -27,29 +27,31 @@ const Header = () => {
       >
         {/* Logo Section */}
         <div className="flex-shrink-0">
-          <Image
-            src="/Logo.svg" // Ensure this is the correct path to your logo in the public folder
-            alt="Logo"
-            width={40} // Adjusted width for small screens
-            height={40} // Adjusted height for small screens
-            className="md:w-16 md:h-16 lg:w-20 lg:h-20" // Responsive classes for width and height
-          />
+          <a href="#">
+            <Image
+              src="/Logo.svg" // Ensure this is the correct path to your logo in the public folder
+              alt="Logo"
+              width={60} // Adjusted width for small screens
+              height={60} // Adjusted height for small screens
+              className="md:w-16 md:h-20 lg:w-20 lg:h-20" // Responsive classes for width and height
+            />
+          </a>
         </div>
 
         {/* Center Links (Changes for Small Screens) */}
-        <div
+        <nav
           className={`${montserrat.className} hidden sm:flex flex-row justify-center items-center text-xs text-center md:text-lg font-normal space-x-4 sm:space-x-8`}
         >
-          <a href="#" className="hover:underline">
+          <a href="#about-us" className="hover:underline">
             About Us
           </a>
-          <a href="#" className=" hover:underline">
+          <a href="#location" className=" hover:underline">
             Location
           </a>
-          <a href="#" className="hover:underline">
+          <a href="#contact" className="hover:underline">
             Contact
           </a>
-        </div>
+        </nav>
 
         {/* Social Icons */}
         <div className="space-x-6 hidden md:flex">
@@ -76,13 +78,13 @@ const Header = () => {
             >
               <aside>
                 <nav className="mt-8 flex flex-col items-center space-y-4 pb-3 border-b border-black/10">
-                  <a href="#" className="hover:underline text-base">
+                  <a href="#about-us" className="hover:underline text-base">
                     About Us
                   </a>
-                  <a href="#" className="hover:underline text-base">
+                  <a href="#location" className="hover:underline text-base">
                     Location
                   </a>
-                  <a href="#" className="hover:underline text-base">
+                  <a href="#contact" className="hover:underline text-base">
                     Contact
                   </a>
                   <div className="flex space-x-6 mt-6">

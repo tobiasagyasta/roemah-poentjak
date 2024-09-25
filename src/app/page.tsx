@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { montserrat, merriweather, playfairDisplay } from "./fonts/fonts";
 import HeroBanner from "@/components/HeroBanner";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
     <>
       <main>
         <HeroBanner></HeroBanner>
-        <section className="history">
+        <section className="history" id="about-us">
           <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
             <div className="text-content md:w-1/2 p-10 text-center">
               <h1
@@ -77,9 +78,9 @@ export default function Home() {
           />
         </section>
         <section className="about-us">
-          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
+          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center bg-[#A19992]">
             {/* Image on the left */}
-            <div className="flex justify-center items-center md:w-1/2 px-10 py-20 bg-[#253C53]">
+            <div className="flex justify-center items-center md:w-1/2 px-10 py-20 bg-[#E7E2DB]">
               <div className="relative w-full max-w-[500px]">
                 <Image
                   src="/bed.jpg"
@@ -112,7 +113,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="location relative bg-[#F8F5F2] py-16">
+        <section className="location relative bg-[#F8F5F2] py-16" id="location">
           <div className="container mx-auto text-center mb-8">
             <h1
               className={`${playfairDisplay.className} text-4xl text-center md:text-5xl font-bold mb-4 leading-tight`}
@@ -136,6 +137,9 @@ export default function Home() {
               className="w-full md:w-2/3 lg:w-1/2 rounded-lg shadow-lg"
             ></iframe>
           </div>
+        </section>
+        <section className="Contact Us" id="contact">
+          <ContactForm />
         </section>
       </main>
     </>

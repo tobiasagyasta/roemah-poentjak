@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { openSans } from "./fonts/fonts";
 import Header from "@/components/Header";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${openSans.className} bg-[#E1E3EA]`}>
         <Header />
+        <Toaster />
         {children}
       </body>
     </html>
